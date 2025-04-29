@@ -19,7 +19,7 @@ O projeto inclui os seguintes diagramas:
    - Foco nas pessoas e sistemas que interagem com o sistema bancário
    - Diagrama: `context_diagram.png`
    
-   ![Diagrama de Contexto](plantuml/diagramas/L1-Context/context_diagram.png)
+   ![Diagrama de Contexto](src/plantuml/diagramas/L1-Context/context_diagram.png)
 
 2. **Diagrama de Container (Level 2)**
    - Detalhamento dos principais componentes do sistema
@@ -27,7 +27,7 @@ O projeto inclui os seguintes diagramas:
    - Mapeamento das interações entre containers
    - Diagrama: `container_diagram.png`
    
-   ![Diagrama de Container](plantuml/diagramas/L2-Container/container_diagram.png)
+   ![Diagrama de Container](src/plantuml/diagramas/L2-Container/container_diagram.png)
 
 3. **Diagrama de Componentes (Level 3)**
    - Detalhamento da estrutura interna dos containers
@@ -39,10 +39,10 @@ O projeto inclui os seguintes diagramas:
      - `component_api_crosscutting_diagram.png`: Componentes cross-cutting da API
      - `component_api_springboot_diagram.png`: Componentes da API Spring Boot
    
-   ![Componentes do Serviço de Contas](plantuml/diagramas/L3-component/component_account_service_diagram.png)
-   ![Componentes da API Principal](plantuml/diagramas/L3-component/component_api_diagram.png)
-   ![Componentes Cross-Cutting](plantuml/diagramas/L3-component/component_api_crosscutting_diagram.png)
-   ![Componentes Spring Boot](plantuml/diagramas/L3-component/component_api_springboot_diagram.png)
+   ![Componentes do Serviço de Contas](src/plantuml/diagramas/L3-component/component_account_service_diagram.png)
+   ![Componentes da API Principal](src/plantuml/diagramas/L3-component/component_api_diagram.png)
+   ![Componentes Cross-Cutting](src/plantuml/diagramas/L3-component/component_api_crosscutting_diagram.png)
+   ![Componentes Spring Boot](src/plantuml/diagramas/L3-component/component_api_springboot_diagram.png)
 
 4. **Diagramas de Código (Level 4)**
    - Detalhamento da implementação de funcionalidades específicas
@@ -52,8 +52,8 @@ O projeto inclui os seguintes diagramas:
      - `code_transaction_management.png`: Gerenciamento de transações
      - `code_payment_processing.png`: Processamento de pagamentos
    
-   ![Gerenciamento de Transações](plantuml/diagramas/L4-code/code_transaction_management.png)
-   ![Processamento de Pagamentos](plantuml/diagramas/L4-code/code_payment_processing.png)
+   ![Gerenciamento de Transações](src/plantuml/diagramas/L4-code/code_transaction_management.png)
+   ![Processamento de Pagamentos](src/plantuml/diagramas/L4-code/code_payment_processing.png)
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -81,18 +81,23 @@ O projeto inclui os seguintes diagramas:
 ## 🏗️ Estrutura do Projeto
 
 ```
-src/
+.
 ├── c4_model_digitalbank.puml    # Arquivo principal com todos os diagramas
-├── plantuml/
-│   └── diagramas/              # Pasta contendo todos os diagramas gerados
-│       ├── context_diagram.png
-│       ├── container_diagram.png
-│       ├── component_account_service_diagram.png
-│       ├── component_api_diagram.png
-│       ├── component_api_crosscutting_diagram.png
-│       ├── component_api_springboot_diagram.png
-│       ├── code_transaction_management.png
-│       └── code_payment_processing.png
+├── src/
+│   └── plantuml/
+│       └── diagramas/          # Pasta contendo todos os diagramas gerados
+│           ├── L1-Context/
+│           │   └── context_diagram.png
+│           ├── L2-Container/
+│           │   └── container_diagram.png
+│           ├── L3-component/
+│           │   ├── component_account_service_diagram.png
+│           │   ├── component_api_diagram.png
+│           │   ├── component_api_crosscutting_diagram.png
+│           │   └── component_api_springboot_diagram.png
+│           └── L4-code/
+│               ├── code_transaction_management.png
+│               └── code_payment_processing.png
 └── README.md                   # Este arquivo
 ```
 
@@ -102,7 +107,7 @@ src/
 2. Baixe o PlantUML (plantuml.jar)
 3. Execute o comando para gerar os diagramas:
    ```bash
-   java -jar plantuml.jar c4_model_digitalbank.puml -o plantuml/diagramas
+   java -jar plantuml.jar c4_model_digitalbank.puml -o src/plantuml/diagramas
    ```
 
 ## 🤝 Contribuições
