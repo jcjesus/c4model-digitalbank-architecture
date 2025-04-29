@@ -28,17 +28,51 @@ O C4 Model foi criado por Simon Brown, um arquiteto de software britânico, a pa
 
 ## 3. Estrutura do C4 Model
 
-- **Context (Contexto do sistema e interações externas):**  
-  Mostra o sistema como um todo, suas fronteiras e como ele interage com usuários, sistemas externos e outros atores.
+**Visão Hierárquica do Aprendizado**
+O C4 Model segue uma abordagem hierárquica que facilita o aprendizado progressivo e a comunicação efetiva. Cada nível representa um degrau no entendimento do sistema, permitindo que diferentes públicos compreendam a arquitetura no nível de detalhe apropriado para seu papel.
 
-- **Container (Aplicações e serviços):**  
-  Detalha os principais containers do sistema, como aplicações web, APIs, bancos de dados, serviços, etc., e como eles se comunicam.
+**Pirâmide do Conhecimento Arquitetural**
 
-- **Component (Componentes internos dos serviços):**  
-  Mostra a decomposição interna de cada container, identificando os principais componentes, suas responsabilidades e interações.
+1. **Context (Nível 1) - Visão Executiva**
+   - Nível mais alto de abstração
+   - Foco em stakeholders não técnicos
+   - Responde à pergunta: "O que o sistema faz e com quem interage?"
+   - Ideal para apresentações iniciais e alinhamento estratégico
+   - [Diagrama de Contexto](src/plantuml/diagramas/L1-Context/context_diagram.png)
 
-- **Code (Visão de implementação técnica):**  
-  Apresenta detalhes de implementação, como diagramas de classes, sequência ou trechos de código, para ilustrar decisões técnicas específicas.
+2. **Container (Nível 2) - Visão Técnica Inicial**
+   - Primeiro nível de detalhamento técnico
+   - Foco em arquitetos e líderes técnicos
+   - Responde à pergunta: "Como o sistema é estruturado em termos de aplicações e serviços?"
+   - Crucial para decisões de infraestrutura e tecnologia
+   - [Diagrama de Container](src/plantuml/diagramas/L2-Container/container_diagram.png)
+
+3. **Component (Nível 3) - Visão de Desenvolvimento**
+   - Detalhamento da implementação
+   - Foco em desenvolvedores e equipes técnicas
+   - Responde à pergunta: "Como cada container é implementado internamente?"
+   - Essencial para desenvolvimento e manutenção
+   - [Diagramas de Componentes](src/plantuml/diagramas/L3-component/)
+
+4. **Code (Nível 4) - Visão de Implementação**
+   - Maior nível de detalhe
+   - Foco em desenvolvedores e revisores de código
+   - Responde à pergunta: "Como cada componente é implementado em código?"
+   - Fundamental para revisão de código e documentação técnica
+   - [Diagramas de Código](src/plantuml/diagramas/L4-code/)
+
+**Benefícios da Abordagem Hierárquica**
+- **Aprendizado Progressivo**: Cada nível constrói sobre o anterior
+- **Comunicação Adaptativa**: Conteúdo ajustado ao público
+- **Documentação Organizada**: Estrutura clara e mantida
+- **Colaboração Efetiva**: Linguagem comum entre equipes
+
+**Demonstração Prática - Sistema Bancário Digital**
+Vamos explorar cada nível através do exemplo do Sistema Bancário Digital, mostrando como a hierarquia do C4 Model nos ajuda a:
+- Comunicar a visão geral para stakeholders
+- Planejar a infraestrutura técnica
+- Organizar o desenvolvimento
+- Documentar a implementação
 
 ---
 
