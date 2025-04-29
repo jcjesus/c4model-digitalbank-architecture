@@ -1,5 +1,7 @@
 @startuml "context_diagram"
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!define OUTPUTPATH src/plantuml/diagramas/L1-Context/
+!define OUTPUTFORMAT png
 
 ' Título do diagrama de contexto
 title Sistema Bancário Digital - Diagrama de Contexto (Level 1)
@@ -23,6 +25,8 @@ Rel(banking_system, identity_system, "Verifica identidade via", "API")
 
 @startuml "container_diagram"
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define OUTPUTPATH src/plantuml/diagramas/L2-Container/
+!define OUTPUTFORMAT png
 
 ' Título do diagrama de container
 title Sistema Bancário Digital - Diagrama de Container (Level 2)
@@ -60,6 +64,8 @@ Rel(api_app, identity_system, "Usa", "HTTPS")
 
 @startuml "component_account_service_diagram"
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define OUTPUTPATH src/plantuml/diagramas/L3-component/
+!define OUTPUTFORMAT png
 
 ' Título do diagrama de componentes
 title Sistema Bancário Digital - Diagrama de Componentes do Serviço de Contas (Level 3)
@@ -97,6 +103,8 @@ Rel(audit_repository, database, "Escreve logs", "JDBC")
 
 @startuml "component_api_diagram"
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define OUTPUTPATH src/plantuml/diagramas/L3-component/
+!define OUTPUTFORMAT png
 
 ' Título do diagrama de componentes da API
 title Sistema Bancário Digital - Diagrama de Componentes da API (Level 3)
@@ -130,6 +138,8 @@ Rel(customer_controller, account_service, "Invoca", "gRPC")
 
 @startuml "component_api_crosscutting_diagram"
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define OUTPUTPATH src/plantuml/diagramas/L3-component/
+!define OUTPUTFORMAT png
 
 ' Título do diagrama de componentes cross-cutting
 title Sistema Bancário Digital - Diagrama de Componentes Cross-Cutting (Level 3)
@@ -161,6 +171,8 @@ Rel_D(openapi_docs, metrics_collector, "Documenta", $tags="documents")
 
 @startuml "component_api_springboot_diagram"
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define OUTPUTPATH src/plantuml/diagramas/L3-component/
+!define OUTPUTFORMAT png
 
 ' Título do diagrama de componentes Spring Boot
 title Sistema Bancário Digital - Diagrama de Componentes da API Spring Boot (Level 3)
@@ -199,6 +211,8 @@ skinparam class {
     BorderColor #0078D4
     ArrowColor #0078D4
 }
+!define OUTPUTPATH src/plantuml/diagramas/L4-code/
+!define OUTPUTFORMAT png
 
 ' Diagrama de Código - Gerenciamento de Transações
 class Transaction {
@@ -286,6 +300,8 @@ skinparam class {
     BorderColor #0078D4
     ArrowColor #0078D4
 }
+!define OUTPUTPATH src/plantuml/diagramas/L4-code/
+!define OUTPUTFORMAT png
 
 ' Diagrama de Código - Processamento de Pagamentos
 class Payment {
